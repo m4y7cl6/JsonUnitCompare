@@ -14,6 +14,7 @@ public class JsonUnitCompareTest {
     private static final ObjectMapper mapper = new ObjectMapper();
     String dir = "D:\\下載\\diff";
     String suffix = ".json";
+    //廂等配額控制組合(ATI)
     @Test
     public void compareJsonFiles_AtiTables() throws Exception {
         String prefix = "AtiTables" + "_";
@@ -57,6 +58,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //廂等優惠，票價方案維護-基本票價方案
     @Test
     public void compareJsonFiles_BasicFarePlansSearch() throws Exception {
         String prefix = "BasicFarePlansSearch" + "_";
@@ -78,6 +80,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //基本票價表，廂等優惠
     @Test
     public void compareJsonFiles_BasicFarePrices() throws Exception {
         String prefix = "BasicFarePrices" + "_";
@@ -141,6 +144,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //車廂組態
     @Test
     public void compareJsonFiles_CarDiagrams() throws Exception {
         String prefix = "CarDiagrams" + "_";
@@ -271,6 +275,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //廂等管理-廂等設定
     @Test
     public void compareJsonFiles_ClassCodes() throws Exception {
         String prefix = "ClassCodes" + "_";
@@ -292,6 +297,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //廂等管理-訂位廂等設定、訂位廂等配額邏輯設定
     @Test
     public void compareJsonFiles_ClassCodeSettings() throws Exception {
         String prefix = "ClassCodeSettings" + "_";
@@ -523,6 +529,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //車廂種類，廂等管理-廂等設定
     @Test
     public void compareJsonFiles_Compartments() throws Exception {
         String prefix = "Compartments" + "_";
@@ -565,6 +572,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //退票手續費-退票手續費預設值
     @Test
     public void compareJsonFiles_DefaultRefundServiceFees() throws Exception {
         String prefix = "DefaultRefundServiceFees" + "_";
@@ -607,6 +615,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //廂等優惠
     @Test
     public void compareJsonFiles_DiscountFarePrices() throws Exception {
         String prefix = "DiscountFarePrices" + "_";
@@ -628,6 +637,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //開放訂位時程-疏運期設定
     @Test
     public void compareJsonFiles_EffectiveSaleDatePoliciesDateRanges() throws Exception {
         String prefix = "EffectiveSaleDatePoliciesDateRanges" + "_";
@@ -649,6 +659,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //開放訂位時程-開放訂位時程天數
     @Test
     public void compareJsonFiles_EffectiveSaleDatePoliciesEarlyDays() throws Exception {
         String prefix = "EffectiveSaleDatePoliciesEarlyDays" + "_";
@@ -670,6 +681,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //開放訂位時程-星期別展延
     @Test
     public void compareJsonFiles_EffectiveSaleDatePoliciesFrequencies() throws Exception {
         String prefix = "EffectiveSaleDatePoliciesFrequencies" + "_";
@@ -712,6 +724,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //付款期限-專案付款期限設定
     @Test
     public void compareJsonFiles_FareGroups() throws Exception {
         String prefix = "FareGroups" + "_";
@@ -775,6 +788,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //票價方案維護，促銷方案維護
     @Test
     public void compareJsonFiles_FreeSeatingPromotions() throws Exception {
         String prefix = "FreeSeatingPromotions" + "_";
@@ -796,6 +810,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //時間設定
     @Test
     public void compareJsonFiles_GeneralTime() throws Exception {
         String prefix = "GeneralTime" + "_";
@@ -838,6 +853,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //付款期限-付款期限控制組合
     @Test
     public void compareJsonFiles_HoldLimitRules() throws Exception {
         String prefix = "HoldLimitRules" + "_";
@@ -859,6 +875,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //付款期限-付款期限設定
     @Test
     public void compareJsonFiles_HoldLimitStrategies() throws Exception {
         String prefix = "HoldLimitStrategies" + "_";
@@ -1112,6 +1129,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //自由座尖離峰設定-月曆設定
     @Test
     public void compareJsonFiles_PeakCalendarDates() throws Exception {
         String prefix = "PeakCalendarDates" + "_";
@@ -1133,6 +1151,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //自由座尖離峰設定-時間區段設定
     @Test
     public void compareJsonFiles_PeakTimeNames() throws Exception {
         String prefix = "PeakTimeNames" + "_";
@@ -1154,6 +1173,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //自由座尖離峰設定-週設定
     @Test
     public void compareJsonFiles_PeakWeekdays() throws Exception {
         String prefix = "PeakWeekdays" + "_";
@@ -1175,6 +1195,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //罰款、費用及補發手續費
     @Test
     public void compareJsonFiles_PenaltyServiceCharges() throws Exception {
         String prefix = "PenaltyServiceCharges" + "_";
@@ -1217,6 +1238,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //廂等優惠
     @Test
     public void compareJsonFiles_Projects() throws Exception {
         String prefix = "Projects" + "_";
@@ -1259,6 +1281,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //退票手續費-專案退票手續費
     @Test
     public void compareJsonFiles_ProjectServiceFees() throws Exception {
         String prefix = "ProjectServiceFees" + "_";
@@ -1302,6 +1325,28 @@ public class JsonUnitCompareTest {
         JSONAssert.assertEquals(json1, json2, true);
     }
     @Test
+    public void compareJsonFiles_PromotionCategories() throws Exception {
+        String prefix = "PromotionCategories" + "_";
+
+        Path[] files = LatestFilesFinder.findLatestTwoFiles(dir, prefix, suffix);
+
+        if (files.length < 2) {
+            throw new RuntimeException("找不到兩個以上符合條件的檔案");
+        }
+
+        JsonNode tree1 = mapper.readTree(Files.newInputStream(files[0]));
+        JsonNode tree2 = mapper.readTree(Files.newInputStream(files[1]));
+
+        JsonNode sortedTree1 = sortJson(tree1);
+        JsonNode sortedTree2 = sortJson(tree2);
+
+        String json1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sortedTree1);
+        String json2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sortedTree2);
+
+        JSONAssert.assertEquals(json1, json2, true);
+    }
+    //
+    @Test
     public void compareJsonFiles_PromotionCategoryMappings() throws Exception {
         String prefix = "PromotionCategoryMappings" + "_";
 
@@ -1322,6 +1367,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //促銷方案維護
     @Test
     public void compareJsonFiles_PromotionsSearch() throws Exception {
         String prefix = "PromotionsSearch" + "_";
@@ -1343,6 +1389,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //退票手續費-退票手續費組合
     @Test
     public void compareJsonFiles_RefundServiceFees() throws Exception {
         String prefix = "RefundServiceFees" + "_";
@@ -1574,6 +1621,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //車站設定
     @Test
     public void compareJsonFiles_Stations() throws Exception {
         String prefix = "Stations" + "_";
@@ -1595,6 +1643,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //停站模式
     @Test
     public void compareJsonFiles_StoppingPatterns() throws Exception {
         String prefix = "StoppingPatterns" +"_";
@@ -1637,6 +1686,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //指標管理及前端控制-票務註記指標管理
     @Test
     public void compareJsonFiles_TicketEndorsements() throws Exception {
         String prefix = "TicketEndorsements" + "_";
@@ -1680,6 +1730,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //退票手續費-設備相關
     @Test
     public void compareJsonFiles_TicketProductPolicy() throws Exception {
         String prefix = "TicketProductPolicy" + "_";
@@ -1701,6 +1752,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //操作通路，變更規則
     @Test
     public void compareJsonFiles_TicketScopePolicies() throws Exception {
         String prefix = "TicketScopePolicies" + "_";
@@ -1743,6 +1795,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //座位組合設定
     @Test
     public void compareJsonFiles_TrainAssemblies() throws Exception {
         String prefix = "TrainAssemblies" + "_";
@@ -1764,6 +1817,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //座位組合設定
     @Test
     public void compareJsonFiles_TrainAssembliesVersions() throws Exception {
         String prefix = "TrainAssembliesVersions" + "_";
@@ -1785,7 +1839,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
-
+    //列車組態
     @Test
     public void compareJsonFiles_TrainDiagrams() throws Exception {
         String prefix = "TrainDiagrams" + "_";
@@ -1807,6 +1861,7 @@ public class JsonUnitCompareTest {
 
         JSONAssert.assertEquals(json1, json2, true);
     }
+    //自由座停售末班車時刻表
     @Test
     public void compareJsonFiles_TrainLastDeparture() throws Exception {
         String prefix = "TrainLastDeparture" + "_";
