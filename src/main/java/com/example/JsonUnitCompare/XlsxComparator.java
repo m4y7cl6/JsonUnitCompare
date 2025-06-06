@@ -1,4 +1,4 @@
-﻿package com.example.JsonUnitCompare;
+package com.example.JsonUnitCompare;
 
 import java.io.IOException;
 import java.nio.file.Files;
