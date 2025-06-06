@@ -19,7 +19,7 @@ public class ZComparatorTest {
                 diffs.stream().anyMatch(line ->
                         line.contains("<無資料>") || line.contains("差異]")
                 ),
-                "應包含實際差異訊息（如缺資料或欄位不同）"
+                "包含實際的差異資訊"
         );
     }
 
