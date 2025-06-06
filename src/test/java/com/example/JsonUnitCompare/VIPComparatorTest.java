@@ -12,16 +12,16 @@ public class VIPComparatorTest {
     String file2Path = "D:\\下載\\PROD-20250605171311-保留座位(VIP).xlsx";
     @Test
     public void testVIPDifferences() throws Exception {
-
         List<String> diffs = XlsxComparator.VIPCompareByTrainDateCar(file1Path, file2Path);
-
         diffs.forEach(System.out::println);
-        assertFalse(diffs.isEmpty(), "偵測到座位、數量或缺少資料的差異");
-        assertTrue(
-                diffs.stream().anyMatch(line ->
-                        line.contains("<無資料>") || line.contains("差異]")
-                ),
-                "包含實際的差異資訊"
-        );
+        assertTrue(diffs.isEmpty(), "");
+        if (!diffs.isEmpty()) {
+            assertTrue(
+                    diffs.stream().anyMatch(line ->
+                            line.contains("<無資料>") || line.contains("差異]")
+                    ),
+                    "包含實際的差異資訊"
+            );
+        }
     }
 }

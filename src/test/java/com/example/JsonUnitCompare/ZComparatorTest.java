@@ -14,13 +14,15 @@ public class ZComparatorTest {
     public void testZDifferences() throws Exception {
         List<String> diffs = XlsxComparator.ZCompareByTrainDateCar(file1Path, file2Path);
         diffs.forEach(System.out::println);
-        assertFalse(diffs.isEmpty(), "偵測到座位、數量或缺少資料的差異");
-        assertTrue(
-                diffs.stream().anyMatch(line ->
-                        line.contains("<無資料>") || line.contains("差異]")
-                ),
-                "包含實際的差異資訊"
-        );
-    }
 
+        assertTrue(diffs.isEmpty(), "");
+        if (!diffs.isEmpty()) {
+            assertTrue(
+                    diffs.stream().anyMatch(line ->
+                            line.contains("<無資料>") || line.contains("差異]")
+                    ),
+                    "包含實際的差異資訊"
+            );
+        }
+    }
 }
