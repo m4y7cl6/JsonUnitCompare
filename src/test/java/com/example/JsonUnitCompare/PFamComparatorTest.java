@@ -7,12 +7,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ZComparatorTest {
+public class PFamComparatorTest {
     String file1Path = "D:\\下載\\UAT-20250606085921-列車長保留座位.xlsx";
     String file2Path = "D:\\下載\\PROD-20250606085921-列車長保留座位.xlsx";
     @Test
-    public void testZDifferences() throws Exception {
-        List<String> diffs = XlsxComparator.ZCompareByTrainDateCar(file1Path, file2Path);
+    public void testPFamDifferences() throws Exception {
+        List<String> diffs = XlsxComparator.PFamCompareByTrainDateCar(file1Path, file2Path);
         diffs.forEach(System.out::println);
 
         assertTrue(diffs.isEmpty(), "");

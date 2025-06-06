@@ -61,7 +61,7 @@ public class XlsxComparator {
         return differences;
     }
 
-    public static List<String> ZCompareByTrainDateCar(String file1Path, String file2Path) throws IOException {
+    public static List<String> PFamCompareByTrainDateCar(String file1Path, String file2Path) throws IOException {
         Map<String, String[]> map1 = PFamBuildKeyedRowMapFromXlsx(Paths.get(file1Path));
         Map<String, String[]> map2 = PFamBuildKeyedRowMapFromXlsx(Paths.get(file2Path));
 
