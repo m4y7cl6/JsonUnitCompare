@@ -2,13 +2,20 @@ package com.example.JsonUnitCompare;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.junit.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
+import static com.example.JsonUnitCompare.JsonNodesCompare.compareJsonNodes;
 import static com.example.JsonUnitCompare.SortJson.sortJson;
+import static org.junit.Assert.assertEquals;
 
 public class JsonUnitCompareTest {
     private static final ObjectMapper mapper = new ObjectMapper();
@@ -636,6 +643,40 @@ public class JsonUnitCompareTest {
         String json2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sortedTree2);
 
         JSONAssert.assertEquals(json1, json2, true);
+//        ArrayNode array1 = (ArrayNode) tree1.get("content");
+//        ArrayNode array2 = (ArrayNode) tree2.get("content");
+//
+//        Map<String, JsonNode> map1 = buildMapById(array1);
+//        Map<String, JsonNode> map2 = buildMapById(array2);
+//
+//        Set<String> allKeys = new HashSet<>();
+//        allKeys.addAll(map1.keySet());
+//        allKeys.addAll(map2.keySet());
+//
+//        int added = 0, removed = 0, modified = 0;
+//
+//        for (String key : allKeys) {
+//            JsonNode oldItem = map1.get(key);
+//            JsonNode newItem = map2.get(key);
+//
+//            if (oldItem == null) {
+//                System.out.println("新增: " + key);
+//                added++;
+//            } else if (newItem == null) {
+//                System.out.println("刪除: " + key);
+//                removed++;
+//            } else if (!oldItem.equals(newItem)) {
+//                System.out.println("修改: " + key);
+//                System.out.println("原本: " + oldItem);
+//                System.out.println("修改: " + newItem);
+//                modified++;
+//            }
+//        }
+//
+//        System.out.println("統計結果：新增 " + added + " 筆，刪除 " + removed + " 筆，修改 " + modified + " 筆。");
+//
+//        // 最後仍做 assert，讓失敗能被報告
+//        assertEquals("JSON 資料不一致", 0, added + removed + modified);
     }
     //開放訂位時程-疏運期設定
     @Test
@@ -1259,6 +1300,7 @@ public class JsonUnitCompareTest {
         String json2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sortedTree2);
 
         JSONAssert.assertEquals(json1, json2, true);
+
     }
     @Test
     public void compareJsonFiles_ProjectSalesChannelFlagSettings() throws Exception {
@@ -1905,4 +1947,12 @@ public class JsonUnitCompareTest {
         JSONAssert.assertEquals(json1, json2, true);
     }
 
+    private Map<String, JsonNode> buildMapById(ArrayNode array) {
+        Map<String, JsonNode> map = new HashMap<>();
+        for (JsonNode node : array) {
+            String id = node.has("farePlanCode") ? node.get("farePlanCode").asText() : node.toString();
+            map.put(id, node);
+        }
+        return map;
+    }
 }
