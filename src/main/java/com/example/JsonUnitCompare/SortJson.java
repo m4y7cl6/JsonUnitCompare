@@ -31,6 +31,8 @@ public class SortJson {
                     comparator = Comparator.comparing(o -> o.get("name").asText());
                 } else if (first.has("dayOfDepartureRange")) {
                     comparator = Comparator.comparingInt(o -> o.get("dayOfDepartureRange").get("from").asInt());
+                } else if (first.has("dayOfDepartureFrom")) {
+                    comparator = Comparator.comparingInt(o -> o.get("dayOfDepartureFrom").asInt());
                 } else if (first.has("farePlanCode")) {
                     comparator = Comparator.comparing(o -> o.get("farePlanCode").asText());
                 } else if (first.has("departureStationCode") && first.has("arrivalStationCode")) {

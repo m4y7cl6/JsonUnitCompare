@@ -9,13 +9,9 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
-import static com.example.JsonUnitCompare.JsonNodesCompare.compareJsonNodes;
 import static com.example.JsonUnitCompare.SortJson.sortJson;
-import static org.junit.Assert.assertEquals;
 
 public class JsonUnitCompareTest {
     private static final ObjectMapper mapper = new ObjectMapper();
